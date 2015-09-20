@@ -2,10 +2,14 @@
   "name": "personal-site",
   "version": "1.0.0",
   "description": "Personal site for Layne McNish",
-  "repository": "git@github.com:laynemcnish/personal-site.git",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:laynemcnish/personal-site.git"
+  },
   "scripts": {
-    "test": "test"
+    "start": "npm run server & npm run client",
+    "server": "node server",
+    "client": "webpack && node webpack.server.js"
   },
   "keywords": [
     "react",
