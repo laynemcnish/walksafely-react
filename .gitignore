@@ -1,2 +1,7 @@
 # Ignore installed node packages
 /node_modules
+
+# Ignore webpack bundles
+/static
+
+.DS_Store
