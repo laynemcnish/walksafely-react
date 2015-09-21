@@ -9,10 +9,8 @@ export default class Layout extends PureComponent {
 
     return (
       <div className="panel-container">
-        <div className="fixed-panel">
-
-          <Navbar />
-
+        <Navbar />
+        <div className="container-fluid">
 
           <div className="main-area">
             <div className="content">

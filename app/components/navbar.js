@@ -10,23 +10,21 @@ export default class Navbar extends React.Component {
   render () {
     const { children } = this.props;
     return (
-      <div className="nav navbar">
-        <div className="content">
-          <h4>WELCOME</h4>
-          <ul>
-
-            <li>
-              <Link to="/"> Home </Link>
-            </li>
-
-            <li>
-              <Link to="/about"> About </Link>
-            </li>
-          </ul>
-
-          {children}
-
-        </div>
+      <div className="nav-container">
+        <nav classNome="navbar navbar-default navbar-fixed-top">
+          <div className="container">
+            <div id="navbar">
+              <ul className="nav navbar-nav">
+                <li className="nav-link text-center"><Link to="/"> Home </Link></li>
+                <li className="nav-link text-center"><Link to="/about"> About </Link></li>
+                <li className="logo text-center"><h1>Layne McNish</h1></li>
+                <li className="nav-link text-center"><Link to="/"> Portfolio </Link></li>
+                <li className="nav-link text-center"><Link to="/about"> Contact </Link></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        {children}
       </div>
     );
   }
