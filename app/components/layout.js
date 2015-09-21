@@ -5,7 +5,7 @@ require("../styles/application.css");
 
 export default class Layout extends PureComponent {
   render () {
-    const { children, location: { pathname } } = this.props;
+    const { children } = this.props;
 
     return (
       <div className="panel-container">

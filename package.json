@@ -8,7 +8,8 @@
     "url": "git@github.com:laynemcnish/personal-site.git"
   },
   "scripts": {
-    "start": "node server"
+    "start": "node server",
+    "postinstall": "node deploy"
   },
   "keywords": [
     "react",
