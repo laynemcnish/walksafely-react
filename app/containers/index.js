@@ -13,8 +13,6 @@ export default class Root extends Component {
   }
 
   render () {
-
-    console.log('found index container');
     return (
       <Provider store={store}>
 

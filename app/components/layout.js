@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
 import PureComponent from 'react-pure-render/component';
 import Navbar from './navbar';
+require("../styles/application.css");
 
 export default class Layout extends PureComponent {
   render () {
-    console.log('found index component');
     const { children, location: { pathname } } = this.props;
 
     return (
@@ -28,7 +28,7 @@ export default class Layout extends PureComponent {
 
   renderAssistanceQuestion () {
     return (
-      <p><i className="fa fa-hand-o-left" /> How may we be of assistance?</p>
+      <p><i className="fa fa-hand-o-left" /> This is the homepage!</p>
     );
   }
 }
