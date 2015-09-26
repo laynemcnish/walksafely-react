@@ -29,10 +29,14 @@
 }
 
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
-    background: url('http://www.bellaterreno.com/graphics/clipart_mystical/robottiny/robottiny_canister_ani.gif') no-repeat;
+    background: url('http://a.deviantart.net/avatars/m/m/mmoi.gif') no-repeat;
     color: black;
     border-top-left-radius: 6px !important;
     border-bottom-left-radius: 6px !important;
     border-top-right-radius: 6px !important;
     border-bottom-right-radius: 6px !important;
+}
+
+.navbar-nav > li > a:focus {
+    background: none;
 }
