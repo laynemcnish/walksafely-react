@@ -1,12 +1,14 @@
-import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
-import thunkMiddleware from 'redux-thunk';
+import apiMiddleware from '../util/middleware/api';
 import * as reducers from '../reducers';
+import initStore, { createRootReducer } from '../util/init_store';
 
-function createStoreWithMiddleware () {
-  const reducer = combineReducers(reducers);
+const store = initStore(reducers, apiMiddleware);
 
-  return applyMiddleware(thunkMiddleware)(createStore)(reducer);
+if (__DEV__ && module.hot) {
+  module.hot.accept('../reducers', () => {
+    const nextReducers = require('../reducers/index');
+    store.replaceReducer(createRootReducer(nextReducers));
+  });
 }
 
-
-export default createStoreWithMiddleware();
+export default store;

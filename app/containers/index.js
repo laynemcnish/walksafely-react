@@ -1,30 +1,26 @@
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import { Router, Route } from 'react-router';
-import { history } from 'react-router/lib/BrowserHistory';
-
-import  Layout from '../components/layout';
-import AboutPage from '../components/about_page';
+import React from 'react';
+import PureComponent from 'react-pure-render/component';
 import store from '../store';
+import initRootComponent from '../util/init_root_component';
+import Header from './header';
+import MapCanvas from './map-canvas';
+require("../styles/application.css");
 
-export default class Root extends Component {
-  constructor(props) {
-    super(props);
-  }
+class Root extends PureComponent {
 
   render () {
     return (
-      <Provider store={store}>
-
-        {() =>
-          <Router history={history}>
-            <Route path="/" component={Layout}>
-              <Route path="about" component={AboutPage}/>
-            </Route>
-          </Router>
-        }
-
-      </Provider>
+      <div className="content">
+        <div className="container">
+          <Header />
+        </div>
+        <div className="map-container">
+          <MapCanvas />
+        </div>
+      </div>
     );
-  };
+  }
 }
+
+
+export default initRootComponent(Root, store);

@@ -1,7 +1,7 @@
-import AboutPage from './about_page';
-import Layout from './layout';
+import MapCanvas from './map-canvas';
+import Header from './header';
 
 export default {
-  Layout,
-  AboutPage,
+  Header,
+  MapCanvas,
 };

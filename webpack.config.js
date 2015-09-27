@@ -4,6 +4,8 @@ var nodeModulesPath = path.resolve(__dirname, 'node_modules');
 var buildPath = path.resolve(__dirname, 'public', 'build');
 var mainPath = path.resolve(__dirname, 'app', 'main.js');
 
+var EnvironmentPlugin = new Webpack.DefinePlugin({ __DEV__: true });
+
 var config = {
 
   // Makes sure errors in console map to the correct file
@@ -42,7 +44,10 @@ var config = {
 
   // We have to manually add the Hot Replacement plugin when running
   // from Node
-  plugins: [new Webpack.HotModuleReplacementPlugin()]
+  plugins: [
+    new Webpack.HotModuleReplacementPlugin(),
+    EnvironmentPlugin,
+  ]
 };
 
 module.exports = config;
